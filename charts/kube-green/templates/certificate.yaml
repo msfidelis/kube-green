@@ -3,7 +3,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: kube-green-serving-cert
-  namespace: kube-green
+  namespace: {{ .Release.Namespace }}
 spec:
   dnsNames:
   - kube-green-webhook-service.kube-green.svc
